@@ -216,24 +216,19 @@ opkg install v2ray-core_*.ipk
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密为何适合高封锁环境？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改和流量特征泄露，降低被检测风险。在高封锁网络中，保证节点可用性和连接稳定性，同时提升数据传输安全性，确保长期安全访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否能与其他客户端共存？</h5></div>
-    <div class="panel-body">
-        可以。Nekobox 配置独立，不影响其他客户端的运行。用户可同时安装 Clash、Mellow 或 Shadowrocket，按需切换使用，互不干扰。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 的重写脚本可以实现哪些功能？</h5></div>
     <div class="panel-body">
         QuantumultX 支持 JavaScript 重写脚本，可修改请求头、响应内容、跳转 URL、广告屏蔽和定制化流量处理。结合策略组可实现个性化网络访问和优化，提高用户体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
     <div class="panel-body">
-        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
+        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密为何适合高封锁环境？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改和流量特征泄露，降低被检测风险。在高封锁网络中，保证节点可用性和连接稳定性，同时提升数据传输安全性，确保长期安全访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何检测并处理订阅中的死节点？</h5></div>
@@ -246,9 +241,14 @@ opkg install v2ray-core_*.ipk
         Potatso Lite 可以管理数十个节点，适合轻量用户使用。虽然不支持批量自动更新，但可以手动添加和删除节点，结合策略组实现基本分流和管理功能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 支持按 IP 段分流吗？</h5></div>
+    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
     <div class="panel-body">
-        支持。Sing-box 可根据 IP 段将国内流量直连，国外流量走代理，结合策略组实现智能分流。这样可保证访问速度和稳定性，同时优化节点使用效率，提高网络体验。<hr />    </div>
+        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
+    <div class="panel-body">
+        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的端口转发功能如何开启？</h5></div>
@@ -256,14 +256,14 @@ opkg install v2ray-core_*.ipk
         在服务器端配置文件中启用 port_forwarding 参数并指定目标端口与地址。确保防火墙开放转发端口，客户端使用对应端口连接即可实现流量中继。此功能常用于内网穿透或端口复用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 是否能与其他客户端共存？</h5></div>
     <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+        可以。Nekobox 配置独立，不影响其他客户端的运行。用户可同时安装 Clash、Mellow 或 Shadowrocket，按需切换使用，互不干扰。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 支持按 IP 段分流吗？</h5></div>
     <div class="panel-body">
-        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。    </div>
+        支持。Sing-box 可根据 IP 段将国内流量直连，国外流量走代理，结合策略组实现智能分流。这样可保证访问速度和稳定性，同时优化节点使用效率，提高网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -292,16 +292,16 @@ opkg install v2ray-core_*.ipk
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-16-free-vless-node.htm" title="Clash免费节点 | 10月16日19.2M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接">Clash免费节点 | 10月16日19.2M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-node-share.htm" title="Clash免费节点 | 10月19日18.7M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点订阅链接">Clash免费节点 | 10月19日18.7M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-latest-vless-node.htm" title="Clash免费节点 | 10月27日18.8M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点订阅链接">Clash免费节点 | 10月27日18.8M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-20-vless-node-share.htm" title="Clash免费节点 | 10月20日20.1M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅链接">Clash免费节点 | 10月20日20.1M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-5-vless-node.htm" title="Clash免费节点 | 10月5日20.5M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅链接">Clash免费节点 | 10月5日20.5M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-5-vless-windows.htm" title="Clash免费节点 | 11月5日22M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅链接">Clash免费节点 | 11月5日22M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-vless-node.htm" title="Clash免费节点 | 11月12日18.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅链接">Clash免费节点 | 11月12日18.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-21-free-subscribe-node.htm" title="Clash免费节点 | 10月21日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接">Clash免费节点 | 10月21日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-18-today-vless-node.htm" title="Clash免费节点 | 10月18日22.2M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接">Clash免费节点 | 10月18日22.2M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-1-vless-node-github.htm" title="Clash免费节点 | 11月1日22.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅链接">Clash免费节点 | 11月1日22.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-free-vless-node.htm" title="Clash免费节点 | 10月9日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅链接">Clash免费节点 | 10月9日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-vless-node-share.htm" title="Clash免费节点 | 11月13日19.5M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅链接">Clash免费节点 | 11月13日19.5M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-13-free-node-subscribe-links.htm" title="Clash免费节点 | 10月13日20.7M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅链接">Clash免费节点 | 10月13日20.7M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-2-vless-node-github.htm" title="Clash免费节点 | 11月2日22.9M/S|免费SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点订阅链接">Clash免费节点 | 11月2日22.9M/S|免费SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-vless-node.htm" title="Clash免费节点 | 10月8日22.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点订阅链接">Clash免费节点 | 10月8日22.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-vless-github.htm" title="Clash免费节点 | 11月4日21.6M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅链接">Clash免费节点 | 11月4日21.6M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-6-vless-node.htm" title="Clash免费节点 | 10月6日22.7M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅链接">Clash免费节点 | 10月6日22.7M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-free-subscribe-node.htm" title="Clash免费节点 | 10月14日21.3M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅链接">Clash免费节点 | 10月14日21.3M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-9-vless-node-share.htm" title="Clash免费节点 | 11月9日20.5M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅链接">Clash免费节点 | 11月9日20.5M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -313,7 +313,7 @@ opkg install v2ray-core_*.ipk
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
