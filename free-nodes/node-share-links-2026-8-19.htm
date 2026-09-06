@@ -269,11 +269,6 @@ sudo </span><span><span class="hljs-built_in">chmod</span></span><span> +x /usr/
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
-    <div class="panel-body">
-        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 的 Socks 模式有什么作用？</h5></div>
     <div class="panel-body">
         Netch 的 Socks 模式允许用户将代理仅应用于指定进程，而非全局网络。此模式非常适合单个游戏或程序代理，避免影响其他应用的连接方式与速度。<hr />    </div>
@@ -284,29 +279,9 @@ sudo </span><span><span class="hljs-built_in">chmod</span></span><span> +x /usr/
         Quantumult X 的自动策略组可根据延迟、可用性或测速结果自动选择最优节点，用户无需手动切换。可在策略组设置中开启“延迟优先”或“可用性优先”模式以优化体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的伪装域名选择有哪些原则？</h5></div>
     <div class="panel-body">
-        VLess 去掉了内置加密层，改为依赖外部 TLS 进行安全通信，这使其更轻量化且更灵活。它能与 Hysteria、Reality 等现代传输方式结合使用，适应性更强，是取代 Vmess 的新标准。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 的用户管理面板有哪些功能？</h5></div>
-    <div class="panel-body">
-        Hiddify Next 面板可添加或删除用户、设置带宽限制、生成订阅链接、查看流量统计和节点状态。它提供直观的图形界面，无需命令行操作即可管理服务器资源。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 使用 WebSocket 是否有安全优势？</h5></div>
-    <div class="panel-body">
-        WebSocket 可伪装成普通 HTTP/HTTPS 流量，配合 TLS 加密，可隐藏真实通信特征，提升抗封锁能力。结合策略组使用，可保证访问速度和网络稳定性，同时增加节点安全性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
-    <div class="panel-body">
-        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
-    <div class="panel-body">
-        TCP + TLS 模式可模拟 HTTPS 流量，增强抗封锁能力。适合网络封锁严格的环境，通过策略组选择最佳节点，可保证访问速度和连接稳定性，尤其适用于网页浏览和视频播放。<hr />    </div>
+        伪装域名必须是真实可访问网站，并且证书有效。这样可以让 Trojan 流量看起来像普通 HTTPS 请求，减少被封锁或 DPI 检测风险，确保节点安全和可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 可以按协议类型分流吗？</h5></div>
@@ -314,9 +289,34 @@ sudo </span><span><span class="hljs-built_in">chmod</span></span><span> +x /usr/
         支持。用户可按 TCP、UDP 或特定应用协议分流流量，结合策略组，实现游戏加速、视频优化或广告屏蔽等定制化网络策略，提高访问速度和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名选择有哪些原则？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
     <div class="panel-body">
-        伪装域名必须是真实可访问网站，并且证书有效。这样可以让 Trojan 流量看起来像普通 HTTPS 请求，减少被封锁或 DPI 检测风险，确保节点安全和可用性。    </div>
+        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 使用 WebSocket 是否有安全优势？</h5></div>
+    <div class="panel-body">
+        WebSocket 可伪装成普通 HTTP/HTTPS 流量，配合 TLS 加密，可隐藏真实通信特征，提升抗封锁能力。结合策略组使用，可保证访问速度和网络稳定性，同时增加节点安全性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
+    <div class="panel-body">
+        TCP + TLS 模式可模拟 HTTPS 流量，增强抗封锁能力。适合网络封锁严格的环境，通过策略组选择最佳节点，可保证访问速度和连接稳定性，尤其适用于网页浏览和视频播放。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 的用户管理面板有哪些功能？</h5></div>
+    <div class="panel-body">
+        Hiddify Next 面板可添加或删除用户、设置带宽限制、生成订阅链接、查看流量统计和节点状态。它提供直观的图形界面，无需命令行操作即可管理服务器资源。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
+    <div class="panel-body">
+        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
+    <div class="panel-body">
+        VLess 去掉了内置加密层，改为依赖外部 TLS 进行安全通信，这使其更轻量化且更灵活。它能与 Hysteria、Reality 等现代传输方式结合使用，适应性更强，是取代 Vmess 的新标准。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -364,16 +364,16 @@ sudo </span><span><span class="hljs-built_in">chmod</span></span><span> +x /usr/
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-node-share.htm" title="Clash免费节点 | 7月22日21.5M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接">Clash免费节点 | 7月22日21.5M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-17.htm" title="Clash免费节点 | 8月17日22.5M/S|免费Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月17日22.5M/S|免费Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-30-latest-vless-node.htm" title="Clash免费节点 | 7月30日20.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅链接">Clash免费节点 | 7月30日20.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-1.htm" title="Clash免费节点 | 8月1日19.3M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点订阅链接">Clash免费节点 | 8月1日19.3M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-free-node-subscribe.htm" title="Clash免费节点 | 8月2日22M/S|免费V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点订阅链接">Clash免费节点 | 8月2日22M/S|免费V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-vless-node-share.htm" title="Clash免费节点 | 8月16日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月16日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-vless-node-github.htm" title="Clash免费节点 | 8月26日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅链接">Clash免费节点 | 8月26日22.6M/S|免费Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/today-vless-node-2026-8-23.htm" title="Clash免费节点 | 8月23日20.3M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月23日20.3M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-19.htm" title="Clash免费节点 | 8月19日22.3M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月19日22.3M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-21.htm" title="Clash免费节点 | 8月21日22.1M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅链接">Clash免费节点 | 8月21日22.1M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-node-subscribe.htm" title="Clash免费节点 | 8月22日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点订阅链接">Clash免费节点 | 8月22日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点订阅链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-subscribe-node.htm" title="Clash免费节点 | 8月8日21.3M/S|免费Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月8日21.3M/S|免费Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-16-vless-node-share.htm" title="Clash免费节点 | 8月16日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月16日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="Clash免费节点 | 9月2日18.8M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点订阅链接">Clash免费节点 | 9月2日18.8M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-11.htm" title="Clash免费节点 | 8月11日18.8M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月11日18.8M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-27.htm" title="Clash免费节点 | 8月27日21M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点订阅链接">Clash免费节点 | 8月27日21M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-vless-node-share.htm" title="Clash免费节点 | 8月14日21.5M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅链接">Clash免费节点 | 8月14日21.5M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-29.htm" title="Clash免费节点 | 8月29日19.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月29日19.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vless-node-2026-8-7.htm" title="Clash免费节点 | 8月7日22M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点订阅链接">Clash免费节点 | 8月7日22M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点订阅链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -385,10 +385,10 @@ sudo </span><span><span class="hljs-built_in">chmod</span></span><span> +x /usr/
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
